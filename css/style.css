@@ -7,10 +7,9 @@
 
 body {
     background-color: #d4bfb3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
   }
 
-  /* font-family: 'Trebuchet MS', sans-serif; */
   
 h1 {text-align: center;
     font-size: 40px;}
@@ -27,9 +26,9 @@ h3 {color: #65341e;
 
 nav {text-align: center;
     display: inline-block;
-    margin-right: 2.667vw;
     margin-left: 2.667vw;
-    margin-top: 2.667vw;}
+    margin-top: 2.667vw;
+    background-color: #f0e0d8;}
           
 nav a {display: block;
       padding: 10px; 
@@ -46,7 +45,7 @@ nav li {display: inline-block;
 
 a:active {background-color: #FFFFBF;}
 
-a.current {background-color: #65341e;
+a.current {background-color: black;
           text-transform: capitalize;
           text-decoration: underline;}
 
@@ -65,7 +64,7 @@ img {border: 5px solid #7a482b;
 /* div:first-child img {width: 100%;} */
 
 p {display: inline-block;
-height: 100px; 
+height: 150px; 
 width: 85%;
 margin: auto;
 margin-top: 15px; 
@@ -74,7 +73,7 @@ overflow: scroll;
 padding: 5px;
 text-align: center;} 
 
-div img:not(:first-of-type) {display: inline;}
+div img:not(:first-of-type) {display: block;}
 
 div li {display: inline-block; 
         margin: auto;}
@@ -101,7 +100,7 @@ span {display: block;
   display: list-item;
   text-align: left;
   list-style-type: decimal;
-  list-style-position: outside;}
+  list-style-position: outside;} 
 
 /* GRID STUFF */
 .container {display: grid;
@@ -136,26 +135,33 @@ padding-left: 10px;
 padding-bottom: 15px;
 overflow: scroll;}
 
-/* animations */
+.more_food_pics {display: grid;
+  grid-template-columns: 1fr 1fr 1fr;}
+
+.gallery {display: grid;
+  grid-template-columns: 1fr 1fr;}
+
+
+/* ANIMATIONS */
+
+/* bounce */
 @keyframes bounce {
   0% {
-    transform: scale(0.1);
+    transform: scale(0.2);
     opacity: 0;
   }
   60% {
-    transform: scale(1.1);
+    transform: scale(0.9);
     opacity: 1;
   }
   100% {
     transform: scale(1);
   }
 }
+.bounce {animation-duration: 3s;
+  animation-name: bounce;
+  animation-iteration-count: 5}
 
-/* div img:first-of-type {animation-duration: 2s;
-  animation-name: bounce;} */
-
-.animated {animation-duration: 2s;
-  animation-name: bounce;}
 
 @media screen and (prefers-reduced-motion: reduce){
 
@@ -164,4 +170,21 @@ overflow: scroll;}
 
 .gif {display: none;}
 
+}
+
+@media only screen and (min-width: 768px) {
+
+nav {display: block;
+    text-align: right;
+    justify-content: right;
+}
+.container {display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;}
+
+div.item1, div.item3, div.item5, div.item7{
+    grid-column: 1 /span 2;
+}
+    
+div.item2, div.item4, div.item6 {
+    grid-column: 3 /span 2;}
 }
