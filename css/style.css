@@ -165,8 +165,8 @@ overflow: scroll;}
 
 @media screen and (prefers-reduced-motion: reduce){
 
-.animated {
-  animation: none}
+.bounce {
+  animation: none !important}
 
 .gif {display: none;}
 
