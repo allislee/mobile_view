@@ -178,7 +178,9 @@ nav {display: block;
     text-align: right;
     justify-content: right;
 }
-.container {display: grid;
+
+body {background-color: white;}
+/* .container {display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;}
 
 div.item1, div.item3, div.item5, div.item7{
@@ -186,5 +188,5 @@ div.item1, div.item3, div.item5, div.item7{
 }
     
 div.item2, div.item4, div.item6 {
-    grid-column: 3 /span 2;}
+    grid-column: 3 /span 2;} */
 }
